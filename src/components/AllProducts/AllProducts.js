@@ -12,7 +12,7 @@ import ProductCard from "./ProductCard";
 
 const AllProducts = () => {
   const [productsData, setProductsData] = useState([]);
-  const [filter, setPFilter] = useState(productsData);
+  const [filter, setFilter] = useState(productsData);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -20,6 +20,7 @@ const AllProducts = () => {
       .then((res) => {
         console.log("products =>", res.data);
         setProductsData(res.data);
+        setFilter(res.data);
         setIsLoading(false);
       })
       .catch((error) => {
@@ -29,7 +30,7 @@ const AllProducts = () => {
 
   const filterProduct = (cat) => {
     const updatedList = productsData.filter((x) => x.category === cat);
-    setPFilter(updatedList);
+    setFilter(updatedList);
   };
   return (
     <>
@@ -43,7 +44,7 @@ const AllProducts = () => {
           <Button
             variant="secondary"
             onClick={() => {
-              setPFilter(productsData);
+              setFilter(productsData);
             }}>
             All
           </Button>
