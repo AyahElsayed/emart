@@ -1,36 +1,44 @@
-import React from 'react'
-import { Navbar, Container, Nav } from 'react-bootstrap'
-import { MdShoppingCart } from 'react-icons/md';
-// import { Link } from "react-router-dom";
-import './style.scss'
+import React from "react";
+import { Navbar, Container, Nav } from "react-bootstrap";
+import { MdShoppingCart } from "react-icons/md";
+import { Link } from "react-router-dom";
+import "./style.scss";
 
 const NavBar = () => {
   return (
-    <Navbar bg="dark" variant="dark"  >
+    <Navbar bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="/">
-          Online shop
-        </Navbar.Brand>
+        <Navbar.Brand href="/">Online shop</Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-center">
-          <Nav>
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/">About</Nav.Link>
-            <Nav.Link href="/">Products</Nav.Link>
-          </Nav>
+          <Navbar.Text className="mx-2">
+            <Link to="/" className="text-decoration-none">
+              Home
+            </Link>
+          </Navbar.Text>
+          <Navbar.Text className="mx-2">
+            <Link to="/" className="text-decoration-none">
+              About
+            </Link>
+          </Navbar.Text>
+          <Navbar.Text className="mx-2">
+            <Link to="allProducts" className="text-decoration-none">
+              Products
+            </Link>
+          </Navbar.Text>
         </Navbar.Collapse>
 
         <Navbar.Collapse className="justify-content-end">
-          <Navbar.Text className='position-relative'>
+          <Navbar.Text className="position-relative">
             {/* <Link to="/cart" > */}
-            <MdShoppingCart className='cartshopingIcon' />
+            <MdShoppingCart className="cartshopingIcon" />
             {/* </Link> */}
-            <span className='badge'>5</span>
+            <span className="badge">5</span>
           </Navbar.Text>
         </Navbar.Collapse>
       </Container>
     </Navbar>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;
