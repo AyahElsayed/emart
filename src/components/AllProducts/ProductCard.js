@@ -2,7 +2,7 @@ import React from 'react'
 import { Card, Button } from 'react-bootstrap';
 import { MdAddShoppingCart } from 'react-icons/md';
 
-const ProductCard = ({ itemdata }) => {
+const ProductCard = ({ itemdata ,addToCart}) => {
   return (
     <>
       <Card style={{ width: '90%' }} key={itemdata.id} className='h-100 d-flex justify-content-center' >
@@ -20,7 +20,7 @@ const ProductCard = ({ itemdata }) => {
           </Card.Text>
           <Card.Text className='d-flex justify-content-center'>
             <Button variant="secondary"
-            // onClick={() => addToCart()}
+            onClick={() => addToCart()}
             >Add to cart
               <MdAddShoppingCart className='cartIcon m-1' />
             </Button>

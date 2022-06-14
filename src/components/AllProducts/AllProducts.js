@@ -10,10 +10,11 @@ import {
 } from "react-bootstrap";
 import ProductCard from "./ProductCard";
 
-const AllProducts = () => {
+const AllProducts = ({ addToCart }) => {
   const [productsData, setProductsData] = useState([]);
   const [filter, setFilter] = useState(productsData);
   const [isLoading, setIsLoading] = useState(true);
+
 
   useEffect(() => {
     allProducts()
@@ -27,6 +28,8 @@ const AllProducts = () => {
         console.log("products error", error);
       });
   }, []);
+
+
 
   const filterProduct = (cat) => {
     const updatedList = productsData.filter((x) => x.category === cat);
@@ -90,7 +93,7 @@ const AllProducts = () => {
                 lg={3}
                 className="mb-4 d-flex justify-content-center"
                 key={product.id}>
-                <ProductCard itemdata={product} />
+                <ProductCard itemdata={product} addToCart={addToCart}/>
               </Col>
             ))}
           </Row>

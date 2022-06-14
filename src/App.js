@@ -3,14 +3,21 @@ import { Routes, Route } from "react-router-dom";
 import NavBar from './components/Navbar/Navbar';
 import { Home } from './components/Home'
 import AllProducts from './components/AllProducts/AllProducts';
+import React, { useState } from "react";
 
 function App() {
+
+  const [itemsCount, setItemsCount] = useState(0);
+
+  const addToCart = (product) => {
+    setItemsCount(itemsCount + 1);
+  };
   return (
     <>
-      <NavBar />
+      <NavBar itemsCount={itemsCount} />
       <Routes>
-        <Route path="/allProducts" element={<AllProducts />}  />
-        <Route path="/" element={<Home />}  />
+        <Route path="/allProducts" element={<AllProducts addToCart={addToCart} />} />
+        <Route path="/" element={<Home addToCart={addToCart} />} />
       </Routes>
 
     </>
