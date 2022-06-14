@@ -39,7 +39,7 @@ const AllProducts = ({ addToCart }) => {
     <>
       <Container fluid className="productsContainer">
         <h1 className="display-6 fw-bolder text-center mb-5 mt-5">
-          Latest products
+          Our products
         </h1>
         <ButtonGroup
           aria-label="Basic example"
