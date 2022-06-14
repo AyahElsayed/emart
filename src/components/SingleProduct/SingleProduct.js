@@ -29,7 +29,7 @@ const SingleProduct = ({ addToCart }) => {
   const ShowProduct = () => {
     return (
       <>
-        <div className="container mt-5">
+        <div className="container mt-5" style={{height:'80vh'}}>
           <Row className="justify-content-center mt-5 ">
             <Col className="mb-4 d-flex justify-content-center" >
               <img src={product.image} alt={product.title} style={{ width: '50%' }} />

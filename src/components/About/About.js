@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 " style={{height:'80vh'}}>
       <h2 className="text-center mt-3">Who We Are</h2>
       <p>
         <span className="fw-bold display-6">Online Shop </span>
