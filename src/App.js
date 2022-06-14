@@ -16,7 +16,7 @@ function App() {
     <>
       <NavBar itemsCount={itemsCount} />
       <Routes>
-        <Route path="/product/:id" element={<SigleProduct/>} />
+        <Route path="/product/:id" element={<SigleProduct addToCart={addToCart}/>} />
         <Route path="/allProducts" element={<AllProducts addToCart={addToCart} />} />
         <Route path="/" element={<Home addToCart={addToCart} />} />
       </Routes>
