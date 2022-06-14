@@ -17,7 +17,7 @@ const NavBar = ({ itemsCount }) => {
             </Link>
           </Navbar.Text>
           <Navbar.Text className="mx-2">
-            <Link to="/" className="text-decoration-none">
+            <Link to="/about" className="text-decoration-none">
               About
             </Link>
           </Navbar.Text>
