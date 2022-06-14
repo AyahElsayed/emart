@@ -5,6 +5,8 @@ import { useParams } from 'react-router'
 import { Row, Col, Button, } from "react-bootstrap";
 import { AiFillStar } from 'react-icons/ai';
 import { MdAddShoppingCart } from 'react-icons/md';
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 const SingleProduct = ({ addToCart }) => {
 
@@ -52,10 +54,33 @@ const SingleProduct = ({ addToCart }) => {
       </>
     )
   }
+
+  const Loading = () => {
+    return (
+      <>
+        <div className="container mt-5">
+          <Row className="justify-content-center mt-5 ">
+            <Col md={6} className="mb-4">
+              <Skeleton height={400} />
+            </Col>
+            <Col className="mt-3" >
+              <Skeleton height={30} width={300} />
+              <Skeleton height={75} />
+              <Skeleton height={25} width={150} />
+              <Skeleton height={50} />
+              <Skeleton height={150} />
+              <Skeleton height={30}  width={100}/>
+              <Skeleton height={30}  width={100}/>
+            </Col>
+          </Row>
+        </div>
+      </>
+    )
+  }
   return (
     <>
       {
-        lodaing ? 'loading...'
+        lodaing ? <Loading />
           :
           <ShowProduct />
       }
