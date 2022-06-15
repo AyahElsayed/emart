@@ -26,7 +26,7 @@ const ProductCard = ({ itemdata, addToCart }) => {
               </Button>
             </Link>
             <Button variant="secondary"
-              onClick={() => addToCart()}
+              onClick={() => addToCart(itemdata)}
             >Add to cart
               <MdAddShoppingCart className='m-1' />
             </Button>

@@ -30,9 +30,9 @@ const NavBar = ({ itemsCount }) => {
 
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text className="position-relative">
-            {/* <Link to="/cart" > */}
-            <MdShoppingCart className="cartshopingIcon" />
-            {/* </Link> */}
+            <Link to="/cart" >
+              <MdShoppingCart className="cartshopingIcon" />
+            </Link>
             <span className="badge">{itemsCount}</span>
           </Navbar.Text>
         </Navbar.Collapse>

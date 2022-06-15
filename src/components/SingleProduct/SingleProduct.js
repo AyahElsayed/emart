@@ -44,7 +44,7 @@ const SingleProduct = ({ addToCart }) => {
               <p className="lead">{product.description}</p>
               <Button
                 variant="secondary"
-                onClick={() => addToCart()}>
+                onClick={() => addToCart(product)}>
                 Add to cart
                 <MdAddShoppingCart className='m-1' />
               </Button>
