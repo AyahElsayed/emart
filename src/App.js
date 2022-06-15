@@ -13,13 +13,13 @@ function App() {
 
   const [itemsCount, setItemsCount] = useState(0);
   const [cartItems, setCartItems] = useState([]);
-  const [qty, setQty] = useState(1);
+  // const [qty, setQty] = useState(1);
 
   const addToCart = (product) => {
     const exist = cartItems.find((x) => x.id === product.id)
-    setQty(qty + 1)
+    // setQty(qty + 1)
     if (exist) {
-      setQty(qty + 1)
+      // setQty(qty + 1)
     }
     else {
       setItemsCount(itemsCount + 1);
@@ -27,9 +27,17 @@ function App() {
       setCartItems([...temp, product])
       console.log('cartItems', cartItems)
     }
-    console.log('qty', qty)
+    // console.log('qty', qty)
   };
 
+  const deleteFromCart = (product) => {
+    const wantDeleted = cartItems.find((x) => x.id === product.id)
+    const updated = cartItems.filter((x) => x.id !== wantDeleted.id)
+    setCartItems(updated)
+    setItemsCount(itemsCount - 1)
+    console.log('updated', updated)
+  }
+  
   return (
     <>
       <NavBar itemsCount={itemsCount} />
@@ -38,7 +46,7 @@ function App() {
         <Route path="/allProducts" element={<AllProducts addToCart={addToCart} />} />
         <Route path="/" element={<Home addToCart={addToCart} />} />
         <Route path="/about" element={<About />} />
-        <Route path="/cart" element={<Cart cartItems={cartItems} qty={qty} />} />
+        <Route path="/cart" element={<Cart cartItems={cartItems} deleteFromCart={deleteFromCart} />} />
       </Routes>
       <Footer />
     </>
