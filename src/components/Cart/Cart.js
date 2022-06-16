@@ -35,7 +35,12 @@ const Cart = ({ cartItems, deleteFromCart }) => {
               </div>
             ))}
           </div>
-          : <p style={{ height: '100vh' }}>"no items in your cart, shopping now!"</p>
+          : <p
+            className="m-5 lead display-6 p-5"
+            style={{ height: '90vh' }}
+          >
+            You have no items in your shopping cart, start adding some!
+          </p>
 
       }
     </>
