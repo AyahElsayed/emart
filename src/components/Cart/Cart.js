@@ -15,7 +15,7 @@ const Cart = ({ cartItems, deleteFromCart, total }) => {
                     <img
                       src={product.image}
                       alt={product.title}
-                      style={{ width: '10%' }}
+                      style={{ width: '20%' }}
                       className="mx-5"
                     />
                     <div className=" d-flex flex-column mt-2">

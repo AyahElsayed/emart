@@ -31,7 +31,7 @@ const SingleProduct = ({ addToCart }) => {
       <>
         <div className="container mt-5" style={{height:'80vh'}}>
           <Row className="justify-content-center mt-5 ">
-            <Col className="mb-4 d-flex justify-content-center" >
+            <Col className="mb-4 d-flex justify-content-center" sm={12}>
               <img src={product.image} alt={product.title} style={{ width: '50%' }} />
             </Col>
             <Col className="mt-3" >
