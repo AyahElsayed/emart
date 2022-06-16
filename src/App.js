@@ -56,7 +56,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/cart" element={<Cart cartItems={cartItems} deleteFromCart={deleteFromCart} total={total} />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
