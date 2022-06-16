@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col, Button, } from "react-bootstrap";
 
-const Cart = ({ cartItems, deleteFromCart }) => {
+const Cart = ({ cartItems, deleteFromCart, total }) => {
 
   return (
     < >
@@ -34,6 +34,11 @@ const Cart = ({ cartItems, deleteFromCart }) => {
                 </Row>
               </div>
             ))}
+            <p className="m-5 display-6 lead fw-bold"> Total price: ${total}</p>
+            <Button
+              variant="secondary"
+              className="mx-5 display-6 fw-bold"
+            > Buy now!</Button>
           </div>
           : <p
             className="m-5 lead display-6 p-5"
