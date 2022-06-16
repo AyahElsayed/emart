@@ -21,7 +21,6 @@ const Cart = ({ cartItems, deleteFromCart }) => {
                     <div className=" d-flex flex-column mt-2">
                       <h1 className="display-6 fs-2">{product.title}</h1>
                       <h3 className="display-7 my-3">$ {product.price}</h3>
-                      <p>qty: {product.qty}</p>
                       <Button
                         variant="danger"
                         className=""

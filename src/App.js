@@ -13,13 +13,10 @@ function App() {
 
   const [itemsCount, setItemsCount] = useState(0);
   const [cartItems, setCartItems] = useState([]);
-  // const [qty, setQty] = useState(1);
 
   const addToCart = (product) => {
     const exist = cartItems.find((x) => x.id === product.id)
-    // setQty(qty + 1)
     if (exist) {
-      // setQty(qty + 1)
     }
     else {
       setItemsCount(itemsCount + 1);
@@ -27,7 +24,6 @@ function App() {
       setCartItems([...temp, product])
       console.log('cartItems', cartItems)
     }
-    // console.log('qty', qty)
   };
 
   const deleteFromCart = (product) => {
@@ -37,7 +33,7 @@ function App() {
     setItemsCount(itemsCount - 1)
     console.log('updated', updated)
   }
-  
+
   return (
     <>
       <NavBar itemsCount={itemsCount} />
