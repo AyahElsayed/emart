@@ -19,7 +19,7 @@ const AllProducts = ({ addToCart }) => {
   useEffect(() => {
     allProducts()
       .then((res) => {
-        console.log("products =>", res.data);
+        // console.log("products =>", res.data);
         setProductsData(res.data);
         setFilter(res.data);
         setIsLoading(false);

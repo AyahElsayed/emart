@@ -23,7 +23,7 @@ function App() {
       setItemsCount(itemsCount + 1);
       const temp = cartItems
       setCartItems([...temp, product])
-      console.log('cartItems', cartItems)
+      // console.log('cartItems', cartItems)
     }
   };
 
@@ -32,7 +32,7 @@ function App() {
     const updated = cartItems.filter((x) => x.id !== wantDeleted.id)
     setCartItems(updated)
     setItemsCount(itemsCount - 1)
-    console.log('updated', updated)
+    // console.log('updated', updated)
   }
 
   const totalPrice = (cartItems) => {

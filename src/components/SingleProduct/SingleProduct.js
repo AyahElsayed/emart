@@ -17,7 +17,7 @@ const SingleProduct = ({ addToCart }) => {
   useEffect(() => {
     Product({ id })
       .then((res) => {
-        console.log('single product', res.data)
+        // console.log('single product', res.data)
         setProduct(res.data)
         setLodaing(false)
       })
