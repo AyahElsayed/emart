@@ -8,7 +8,11 @@ const NavBar = ({ itemsCount }) => {
   return (
     <Navbar bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="/">Online shop</Navbar.Brand>
+        <Navbar.Text className="mx-2 fs-5 fw-bold">
+            <Link to="/" className="text-decoration-none">
+            Online shop
+            </Link>
+          </Navbar.Text>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-center">
           <Navbar.Text className="mx-2">
